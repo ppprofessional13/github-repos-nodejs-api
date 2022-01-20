@@ -18,7 +18,7 @@ app.get('/', async (req, res) => {
       }))
       .sort((a, b) => b.stars - a.stars);
 
-    res.send(repos);
+    res.send({message:repos});
   } catch (error) {
     res.status(400).send('Error while getting list of repositories');
   }
